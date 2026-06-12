@@ -1,24 +1,28 @@
 <html>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex Legal Operations - Authentication</title>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
 
     <div class="auth-container">
         <div class="auth-image-side">
-            <img id="side-image" src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780496972/image1_xdf0g0.png" alt="Legal Operations">
+            <img id="side-image" src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780496972/image1_xdf0g0.png"
+                alt="Legal Operations">
         </div>
 
         <div class="auth-form-side">
-            
-            <div id="screen-signin" class="form-panel active"> 
+
+            <div id="screen-signin" class="form-panel active">
                 <div class="brand">
-                    <img class="Apex-logo" src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780498722/Apex_logo_ha41s4.svg">
+                    <img class="apex-logo"
+                        src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780498722/Apex_logo_ha41s4.svg">
                     <span class="brand-logo">Apex</span>
                     <span class="brand-sub">LEGAL OPERATIONS</span>
                 </div>
@@ -30,7 +34,7 @@
                         <label for="signin-email">EMAIL ADDRESS</label>
                         <input type="email" id="signin-email" placeholder="Enter your email" required>
                     </div>
-                    
+
                     <div class="input-group">
                         <div class="label-row">
                             <label for="signin-password">PASSWORD</label>
@@ -52,11 +56,18 @@
                 </div>
 
                 <button class="btn-oauth">
-                    <img src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780497437/Google_logo_xjuj6n.svg" alt="Google Logo" class="google-icon">
+                    <img src="https://res.cloudinary.com/dgqglrxvb/image/upload/v1780497437/Google_logo_xjuj6n.svg"
+                        alt="Google Logo" class="google-icon">
                     Sign in with Google
                 </button>
+                <div class="signup-link">
+                    <span>Don't have an account?</span>
+                    <a href="../../Mobile/login/Onboarding-1/onboard1.html">
+                        Get Started
+                    </a>
+                </div>
             </div>
-            
+
 
             <div id="screen-forgot" class="form-panel">
                 <div class="brand">
@@ -86,12 +97,13 @@
                 <h2>Reset Password</h2>
                 <p class="subtitle">Enter a secure password for your account</p>
 
-                <form id="form-reset" onsubmit="event.preventDefault(); alert('Password updated successfully!'); switchScreen('signin');">
+                <form id="form-reset"
+                    onsubmit="event.preventDefault(); alert('Password updated successfully!'); switchScreen('signin');">
                     <div class="input-group">
                         <label for="new-password">New Password</label>
                         <input type="text" id="new-password" placeholder="Enter your new password" required>
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="confirm-password">Confirm New Password</label>
                         <input type="password" id="confirm-password" placeholder="Confirm your new password" required>
@@ -108,4 +120,5 @@
 
     <script src="script2.js"></script>
 </body>
+
 </html>

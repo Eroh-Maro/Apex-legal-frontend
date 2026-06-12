@@ -10,13 +10,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 120vh;
 }
 
 .auth-container {
     display: flex;
     width: 950px;
-    height: 650px;
+    height: 620px;
     background: #ffffff;
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -25,7 +25,6 @@ body {
 
 .auth-image-side {
     flex: 1;
-    background-color: #1a2536;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -71,13 +70,13 @@ body {
     display: block;
     flex-direction: row;
     gap: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .apex-logo {
     flex-direction: column;
     width: 30px;
-    height: 10px;
+
     object-fit: contain;
     margin-top: 5px;
     padding-top: 10px;
@@ -93,13 +92,14 @@ body {
 
 .brand-sub {
     display: block;
+    text-align: center;
     letter-spacing: 2px;
     font-size: 12px;
     font-weight: 600;
     color: #6b7280;
     letter-spacing: 1.5px;
     margin-top: -2px;
-    padding-top: 7px;
+    padding-top: 4px;
 }
 
 h2 {
@@ -276,4 +276,22 @@ input:focus {
 
 .back-link:hover {
     color: #111827;
+}
+
+.signup-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.signup-link a {
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
