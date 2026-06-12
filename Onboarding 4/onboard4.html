@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboard4.css">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/doopzrzep/image/upload/v1780224110/Asset_132_300x_grtslt.png">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h2>Profile Setup</h2>
+                <p>Step 3 of 4</p>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+         <main class="intro">
+            <h1>Profile <br /> Configuration</h1>
+            <p>
+                Verify your identity and set up your professional
+                credentials for the LexDesk platform.
+            </p>
+        </main>
+
+        <!-- Profile card -->
+        <section class="profile">
+            <div class="profile-pic-upload">
+
+                <div class="profile-image">
+                    <img src="https://res.cloudinary.com/doopzrzep/image/upload/v1780497389/Image_fnvk8p.png" alt="Profile picture">
+                </div>
+
+                <p class="profile-para">Profile Photo</p>
+                <p>
+                    Recommended: Square <br/>
+                    JPEG or PNG, min. <br />
+                    400x400px
+                </p>
+
+                <button type="button" class="btn-upload" id="btnUpload">
+                    <img class="upload-file" src="https://res.cloudinary.com/doopzrzep/image/upload/v1780498779/icons8-upload-file-32_vblncc.png" alt="upload file icon">
+                    Choose File
+                </button>
+                <input type="file" id="profileFileInput" accept="image/*" hidden>
+            </div>
+
+            <form action="#" class="form">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" placeholder="Jonathan Miller, Esq" required>
+
+                <label for="email">Email Adress</label>
+                <input type="email" name="email" id="email" placeholder="Jmiller@firm.legal" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" placeholder="+ (555) 000-0000" required>
+
+                <label for="Bio">Bio (Optional)</label>
+                <textarea name="Bio" id="Information" placeholder="Brief summary for internal case records"></textarea>
+            </form>
+        </section>
+          
+
+        <!-- Navigation Footer -->
+        <footer class="buttons">
+            <a href="../Onbaording 3/onboard3.html" class="btn outline">&larr; Previous</a>
+            <a href="../Onboarding 5/onboard5.html" class="btn primary">Next &rarr;</a>
+        </footer>
+
+
+    </div>
+    
+    <script src="onboard4.js"></script>
+</body>
+</html>

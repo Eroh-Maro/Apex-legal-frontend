@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #F3F4F6;
+    height: 100vh;
+    width: 392px;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+/* Typography */
+
+
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header-p {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.signin-header p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 20px;
+}
+
+/* Image */
+
+img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Layout */
+
+.container {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500; 
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: none;
+    font-size: 14px;
+}
+
+
+/* button */
+
+.primary-btn {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    border-radius: none;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group img {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+
+/* footer */
+
+.footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+}
+
+.footer-btn a {
+    color: #1D4ED8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.footer-section img {
+    width: 20px;
+    height: 20px;
+}

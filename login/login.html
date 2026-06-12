@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/doopzrzep/image/upload/v1780224110/Asset_132_300x_grtslt.png">
+</head>
+<body>
+    <div class="container">
+        
+
+            <header class="spinner">
+                
+                <div class="heading">
+                    <figure class="logo">
+                    <img src="https://res.cloudinary.com/doopzrzep/image/upload/v1780224110/Asset_132_300x_grtslt.png" alt="Apex Legal Logo">
+                    </figure>
+
+                    
+                    <h1>Apex</h1>
+                    
+                </div>
+                <p class="header-p">Legal Operations</p>
+
+            </header>
+            
+            <section class="signin-header">
+                <h2>Secure Sign In</h2>
+                <p>Enter your credentials to access your legal dashboard.</p>
+            </section>
+
+            <section class="login-section">
+                <form class="form">
+
+                    <div class="input-group">     
+                        <label for="email">Email Address</label>
+                        <input class="form-control" type="email" id="email" placeholder="attoney@firm.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="password-header">
+                            <label for="password">Password</label>
+                            <a href="../Reset Password two/reset.html" target="_blank" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        <input class="form-control" type="password" id="password" placeholder="Password" required>
+                        <button type="button" class="toggle-password" id="toggle-password">
+                            <img src="https://res.cloudinary.com/doopzrzep/image/upload/v1780301940/icons8-eye-24_vicmea.png" alt="Toggle Password Visibility">
+
+                        </button> 
+                    </div>
+
+                    <div class="input-group">
+                        <label for="remember">
+                            <input class="checkbox" type="checkbox" id="remember" name="remember">
+                            Remember this device for 30 days
+                        </label>
+                    </div>  
+
+                    <div class="input-group primary-btn-group">
+                        <button type="submit" class="primary-btn" id="primary-btn"> <a href="#"> Sign In</a> </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <footer class="footer">
+
+                <div class="footer-text">
+                    <p>or continue with</p>
+                </div>
+                
+
+                <div class="footer-button">
+                    <button type="button" class="google-btn" id="google-btn"> 
+                        <img src="https://res.cloudinary.com/doopzrzep/image/upload/v1780301034/icons8-google_tolrm6.svg" alt="Google Logo">
+                        <a> Sign in with Google</a>
+                    
+                    </button>
+                </div>
+            </footer>
+
+            
+        </div>
+    </div>
+
+    
+
+    <script src="https://accounts.google.com/gsi/client" async defer onload="onGoogleLoaded()"></script>
+    <script src="login.js"></script>
+</body>
+</html>

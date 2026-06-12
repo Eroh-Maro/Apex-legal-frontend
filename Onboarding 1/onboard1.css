@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    background-color: #FFFFFF;
+    max-width: 420px;
+    width: 100%;
+}
+
+/* Card */
+.card {
+  background: #fff;
+}
+
+
+.image-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/* Text Section */
+.text-section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.subtitle::before {
+  content: " ";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #777;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+h1 span {
+  color: #2563eb;
+}
+
+.description {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.start-btn {
+  padding: 25px 35px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.start-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.start-btn:hover {
+  background: #1e4fd8;
+}
+
+hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats p {
+  font-size: 11px;
+  color: #888;
+}
+
+.stats h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 5px;
+}

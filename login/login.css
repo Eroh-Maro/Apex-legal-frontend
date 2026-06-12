@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #F3F4F6;
+    height: 100vh;
+    width: 392px;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+/* Typography */
+
+
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header-p {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.signin-header p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 20px;
+}
+
+/* Image */
+
+img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Layout */
+
+.container {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.input-group label:last-child {
+   text-transform: none;
+   font-size: 14px;
+    font-weight: 300;
+}
+
+.forgot-link {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    text-align: right;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: none;
+    font-size: 14px;
+}
+
+.checkbox {
+    border: 1px solid #D1D5DB;
+    border-radius: none;
+    width: 15px;
+    height: 15px;
+    padding-right: 15px;
+}
+
+.primary-btn {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    border-radius: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center; /* Vertically centers the lines with the text */
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.footer-text p {
+  text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-text::before,
+.footer-text::after {
+  content: "";
+  flex: 1; /* Forces the lines to take up all available horizontal space */
+  border-bottom: 1px solid #000; /* Controls the line thickness, style, and color */
+}
+
+.footer-text:not(:empty)::before {
+  margin-right: 15px; /* Creates spacing between the left line and the text */
+}
+
+.footer-text:not(:empty)::after {
+  margin-left: 15px; /* Creates spacing between the right line and the text */
+}
+
+/* button */
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn {
+    background-color: #FFFFFF;
+    color: #334155;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: none;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.google-btn img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;   
+}
+
+.input-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 20px;
+    height: 20px;
+}
