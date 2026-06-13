@@ -13,6 +13,14 @@ body{
     display:flex;
     min-height:100vh;
 }
+body > div > main > div > section.welcome > div:nth-child(2) > a {
+    background: #1d4ed8;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+}
 
 /* SIDEBAR */
 
