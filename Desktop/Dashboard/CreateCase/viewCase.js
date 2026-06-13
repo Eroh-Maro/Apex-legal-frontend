@@ -89,7 +89,7 @@ async function loadCase() {
 
         const response =
             await fetch(
-                `http://localhost:8080/api/cases/${caseId}`,
+                `https://apex-legal-1.onrender.com/api/cases/${caseId}`,
                 {
                     headers: {
                         Authorization:
@@ -202,7 +202,7 @@ async function loadDocuments() {
 
         const response =
             await fetch(
-                `http://localhost:8080/api/documents/case/${caseId}`,
+                `https://apex-legal-1.onrender.com/api/documents/case/${caseId}`,
                 {
                     headers: {
                         Authorization:
@@ -477,7 +477,7 @@ if (uploadBtn && documentFile) {
 
                 const response =
                     await fetch(
-                        "http://localhost:8080/api/documents/upload",
+                        "https://apex-legal-1.onrender.com/api/documents/upload",
                         {
                             method: "POST",
 
@@ -563,7 +563,7 @@ if (saveNoteBtn) {
 
                 const response =
                     await fetch(
-                        `http://localhost:8080/api/cases/${caseId}/notes`,
+                        `https://apex-legal-1.onrender.com/api/cases/${caseId}/notes`,
                         {
                             method: "POST",
 
@@ -674,7 +674,7 @@ if (saveHearingBtn) {
 
                 const response =
                     await fetch(
-                        "http://localhost:8080/api/hearings/create",
+                        "https://apex-legal-1.onrender.com/api/hearings/create",
                         {
                             method: "POST",
 
@@ -805,7 +805,7 @@ async function loadHearings() {
 
         const response =
             await fetch(
-                `http://localhost:8080/api/hearings/case/${caseId}`,
+                `https://apex-legal-1.onrender.com/api/hearings/case/${caseId}`,
                 {
                     headers: {
                         Authorization:

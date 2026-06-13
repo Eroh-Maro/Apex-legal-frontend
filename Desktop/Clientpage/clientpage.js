@@ -50,10 +50,10 @@ filterButtons.forEach((button) => {
 // =========================
 
 const CLIENTS_API =
-  "http://localhost:8080/api/clients";
+  "https://apex-legal-1.onrender.com/api/clients";
 
 const USER_API =
-  "http://localhost:8080/api/users/me";
+  "https://apex-legal-1.onrender.com/api/users/me";
 
 // =========================
 // LOAD PAGE DATA

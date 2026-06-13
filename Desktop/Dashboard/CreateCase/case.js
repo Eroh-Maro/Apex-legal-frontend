@@ -66,7 +66,7 @@ async function loadCases() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/cases",
+                "https://apex-legal-1.onrender.com/api/cases",
                 {
                     headers: {
                         Authorization:

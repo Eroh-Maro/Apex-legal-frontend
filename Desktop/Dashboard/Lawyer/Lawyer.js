@@ -26,9 +26,9 @@ navItems.forEach((item) => {
 // API ROUTES
 // ======================
 
-const DASHBOARD_API = "http://localhost:8080/api/dashboard";
-const USER_API = "http://localhost:8080/api/users/me";
-const MY_HEARINGS_API = "http://localhost:8080/api/hearings/my-hearings";
+const DASHBOARD_API = "https://apex-legal-1.onrender.com/api/dashboard";
+const USER_API = "https://apex-legal-1.onrender.com/api/users/me";
+const MY_HEARINGS_API = "https://apex-legal-1.onrender.com/api/hearings/my-hearings";
 
 // ======================
 // DASHBOARD

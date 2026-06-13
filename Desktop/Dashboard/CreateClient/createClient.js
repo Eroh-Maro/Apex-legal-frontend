@@ -163,7 +163,7 @@ if (createClientForm) {
 
                 const response =
                     await fetch(
-                        "http://localhost:8080/api/clients/create",
+                        "https://apex-legal-1.onrender.com/api/clients/create",
                         {
                             method: "POST",
 

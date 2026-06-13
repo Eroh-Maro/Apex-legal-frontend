@@ -11,7 +11,7 @@ async function loadUserInfo() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/users/me",
+                "https://apex-legal-1.onrender.com/api/users/me",
                 {
                     headers: {
                         Authorization:
@@ -71,7 +71,7 @@ async function loadCalendar() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/hearings",
+                "https://apex-legal-1.onrender.com/api/hearings",
                 {
                     headers: {
                         Authorization:
