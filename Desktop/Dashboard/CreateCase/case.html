@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Case | Apex Legal</title>
 
-    <link rel="stylesheet" href="./CreateCase.css">
-    <script defer src="./createCase.js"></script>
+    <link rel="stylesheet" href="case.css">
+    <script defer src="case.js"></script>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
         </div>
 
         <nav>
-          <a href="#" class="nav-item ">
+          <a href="../Lawyer/Lawyer.html" class="nav-item ">
             <svg
               width="18"
               height="18"
@@ -158,10 +158,9 @@
         </div>
       </aside>
 
-    <!-- MAIN -->
-    <main class="main-content">
 
-        <!-- TOPBAR -->
+    <!-- MAIN -->
+      <main class="main-content">
         <header class="topbar">
           <div class="search-box">
             <svg width="18" height="24" viewBox="0 0 18 24" fill="none">
@@ -192,262 +191,89 @@
             </div>
           </div>
         </header>
-        <div class="page-content">
+<div class="divide">
 
-            <!-- PAGE HEADER -->
-            <section class="page-header">
+    <header class="page-header">
 
-                <h1>Create New Case</h1>
+        <div>
+            <h1>Case Management</h1>
+            <p>Manage, monitor and organize all legal cases.</p>
+        </div>
 
-                <p>
-                    Enter case information and assign the matter to a legal team.
-                </p>
+        <a
+            href="./CreateCase.html"
+            class="create-case-btn"
+        >
+            + Create New Case
+        </a>
 
-            </section>
+    </header>
 
-            <!-- FORM -->
-            <form id="createCaseForm" class="case-form">
+    <section class="stats-grid">
 
-                <!-- CLIENT & MATTER DETAILS -->
-<div class="card">
+        <div class="stat-card">
+            <h3 id="totalCases">0</h3>
+            <p>Total Cases</p>
+        </div>
 
-    <h2>Case Information</h2>
+        <div class="stat-card">
+            <h3 id="openCases">0</h3>
+            <p>Open Cases</p>
+        </div>
 
-    <div class="form-grid">
+        <div class="stat-card">
+            <h3 id="closedCases">0</h3>
+            <p>Closed Cases</p>
+        </div>
 
-        <!-- CASE TITLE -->
-        <div class="form-group">
-            <label for="title">
-                Case Title *
-            </label>
+        <div class="stat-card">
+            <h3 id="upcomingHearings">0</h3>
+            <p>Upcoming Hearings</p>
+        </div>
+
+    </section>
+
+    <section class="table-card">
+
+        <div class="table-header">
+
+            <h2>Cases</h2>
 
             <input
                 type="text"
-                id="title"
-                placeholder="Enter case title"
-                required
+                id="caseSearch"
+                placeholder="Search cases..."
             >
+
         </div>
 
-        <!-- CASE NUMBER -->
-        <div class="form-group">
-            <label for="caseNumber">
-                Case Number *
-            </label>
+        <table>
 
-            <input
-                type="text"
-                id="caseNumber"
-                placeholder="FHC/L/123/2026"
-                required
-            >
-        </div>
+            <thead>
 
-        <!-- CLIENT -->
-        <div class="form-group">
-    <label for="client">
-        Client
-    </label>
+                <tr>
+                    <th>Case Number</th>
+                    <th>Title</th>
+                    <th>Client</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Action</th>
+                </tr>
 
-    <select id="client" required>
-        <option value="">
-            Select Client
-        </option>
-    </select>
-</div>
+            </thead>
 
-        <!-- CASE TYPE -->
-        <div class="form-group">
-            <label for="caseType">
-                Case Type *
-            </label>
+            <tbody id="caseTableBody">
 
-            <select id="caseType" required>
+            </tbody>
 
-                <option value="">
-                    Select Case Type
-                </option>
+        </table>
 
-                <option value="Litigation">
-                    Litigation
-                </option>
-
-                <option value="Corporate Law">
-                    Corporate Law
-                </option>
-
-                <option value="Property Law">
-                    Property Law
-                </option>
-
-                <option value="Criminal Law">
-                    Criminal Law
-                </option>
-
-                <option value="Family Law">
-                    Family Law
-                </option>
-
-                <option value="Arbitration">
-                    Arbitration
-                </option>
-
-                <option value="Commercial Transactions">
-                    Commercial Transactions
-                </option>
-
-            </select>
-        </div>
-
-        <!-- STATUS -->
-        <div class="form-group">
-            <label for="status">
-                Status
-            </label>
-
-            <select id="status">
-
-                <option value="open">
-                    Open
-                </option>
-
-                <option value="pending">
-                    Pending
-                </option>
-
-                <option value="in_court">
-                    In Court
-                </option>
-
-                <option value="closed">
-                    Closed
-                </option>
-
-                <option value="archived">
-                    Archived
-                </option>
-
-            </select>
-        </div>
-
-        <!-- PRIORITY -->
-        <div class="form-group">
-            <label for="priority">
-                Priority
-            </label>
-
-            <select id="priority">
-
-                <option value="low">
-                    Low
-                </option>
-
-                <option value="medium" selected>
-                    Medium
-                </option>
-
-                <option value="high">
-                    High
-                </option>
-
-                <option value="urgent">
-                    Urgent
-                </option>
-
-            </select>
-        </div>
-
-        <!-- COURT -->
-        <div class="form-group">
-            <label for="courtName">
-                Court Name
-            </label>
-
-            <input
-                type="text"
-                id="courtName"
-                placeholder="Federal High Court"
-            >
-        </div>
-
-        <!-- HEARING DATE -->
-        <div class="form-group">
-            <label for="hearingDate">
-                Hearing Date
-            </label>
-
-            <input
-                type="date"
-                id="hearingDate"
-            >
-        </div>
-
-    </div>
-
-    <!-- DESCRIPTION -->
-    <div class="form-group full-width">
-
-        <label for="description">
-            Case Description
-        </label>
-
-        <textarea
-            id="description"
-            placeholder="Enter case summary, background, or notes..."
-        ></textarea>
-
-    </div>
+    </section>
 
 </div>
 
 
-
-                <!-- DOCUMENTS -->
-                <!-- <div class="card">
-
-                    <h2>Initial Documents</h2>
-
-                    <div class="upload-box">
-
-                        <input
-                            type="file"
-                            id="documents"
-                            multiple
-                        >
-
-                        <p>
-                            Upload PDFs, DOCX, Images or supporting files
-                        </p>
-
-                    </div>
-
-                </div> -->
-
-                <!-- ACTIONS -->
-                <div class="form-actions">
-
-                    <button
-                        type="button"
-                        class="cancel-btn"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="submit"
-                        class="save-btn"
-                    >
-                        Save Case
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </main>
-
+      </main>
 </div>
 
 </body>

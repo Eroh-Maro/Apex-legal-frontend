@@ -99,80 +99,83 @@ body{
     padding:10px;
 }
 
-/* MAIN */
-
 .main-content{
     flex:1;
 }
 
+.overall-space {
+    padding: 0 25px 25px 25px;
+}
+
 .topbar{
-    background:#fff;
-    border-bottom:1px solid #e2e8f0;
-    padding:15px 25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:#fff;
+    padding:12px 20px;
+    width: 100%;
+    border-bottom: 1px solid #C4C7C7;
 }
 
 .search-box{
-    width:55%;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#f1f3f5;
+    padding:12px;
+    width:70%;
 }
 
 .search-box input{
-    width:100%;
-    padding:12px;
-    border:1px solid #dbeafe;
-    border-radius:8px;
+    border:none;
+    background:none;
     outline:none;
+    width:100%;
 }
 
 .topbar-actions{
     display:flex;
     align-items:center;
+    gap:20px;
 }
 
-.top-bar-icons{
-    display:flex;
-    gap:12px;
-}
-
-.icon-btn{
-    border:none;
-    background:none;
-    cursor:pointer;
-    font-size:18px;
-}
+.top-bar-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} 
 
 .profile{
     display:flex;
     align-items:center;
-    gap:12px;
-    margin-left:20px;
-    padding-left:20px;
-    border-left:1px solid #e2e8f0;
+    gap:10px;
+    border-left: 1px solid #C4C7C7;
+    padding-left: 20px;
 }
 
-.profile h4{
-    font-size:14px;
+.profile h4 {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 5px;
 }
 
-.profile p{
-    font-size:12px;
-    color:#64748b;
+.profile p {
+    font-size: 12px;
 }
 
 .profile img{
     width:45px;
     height:45px;
     border-radius:50%;
-    object-fit:cover;
 }
+
 
 /* PAGE */
 
 .page-content{
     padding:30px;
 }
+
 
 .page-header{
     margin-bottom:25px;
@@ -321,4 +324,473 @@ body{
     .page-content{
         padding:20px;
     }
+}
+
+/* PAGE */
+
+.page-content {
+    padding: 30px;
+}
+
+/* HEADER */
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.case-header h1 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.case-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.case-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* BUTTONS */
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    background: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* CARDS */
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+/* CASE INFO GRID */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.info-grid span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.info-grid h4 {
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* DESCRIPTION */
+
+#caseDescription {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* SECTION HEADERS */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* DOCUMENTS */
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.document-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 20px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    background: #fff;
+
+    transition: .2s;
+}
+
+.document-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 10px rgba(37,99,235,.08);
+}
+
+.document-info {
+    flex: 1;
+}
+
+.document-info h4 {
+    margin-bottom: 6px;
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.document-info p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.document-info small {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.document-actions {
+    margin-left: 20px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.download-btn:hover {
+    background: #1d4ed8;
+}
+
+/* NOTES */
+
+.note-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.note-form textarea {
+    flex: 1;
+    min-height: 100px;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    resize: vertical;
+    outline: none;
+}
+
+.note-form textarea:focus {
+    border-color: #2563eb;
+}
+
+#notesContainer {
+    margin-top: 20px;
+}
+
+/* HEARINGS */
+
+#hearingsContainer {
+    min-height: 80px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .case-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .case-actions {
+        flex-wrap: wrap;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .note-form {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   DOCUMENT UPLOAD FORM
+========================= */
+
+.upload-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.upload-form select,
+.upload-form input[type="text"] {
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #fff;
+    min-width: 220px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.upload-form select:focus,
+.upload-form input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   DOCUMENT LIST
+========================= */
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.document-item h4 {
+    font-size: 15px;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.document-item p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.document-item a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* =========================
+   NOTES
+========================= */
+
+.note-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.note-form textarea {
+    flex: 1;
+    min-height: 90px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 14px;
+    resize: vertical;
+    outline: none;
+}
+
+.note-form textarea:focus {
+    border-color: #2563eb;
+}
+
+.note-card {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.note-card p {
+    color: #334155;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.note-card small {
+    color: #64748b;
+}
+
+/* =========================
+   HEARING FORM
+========================= */
+
+.hearing-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.hearing-form .form-group {
+    margin-bottom: 15px;
+}
+
+.hearing-form input,
+.hearing-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+}
+
+.hearing-form input:focus,
+.hearing-form select:focus {
+    border-color: #2563eb;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.case-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.case-actions button,
+.case-actions a {
+    text-decoration: none;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.case-actions .upload-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.case-actions .note-btn {
+    background: #0ea5e9;
+    color: white;
+}
+
+.case-actions .hearing-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.case-actions .edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.case-actions button:hover,
+.case-actions a:hover {
+    opacity: .9;
+}
+
+.hearing-form{
+    display:none;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:20px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+}
+
+.hearing-form.show{
+    display:grid;
+}
+
+.hearing-form button{
+    grid-column:span 2;
+    width:180px;
 }

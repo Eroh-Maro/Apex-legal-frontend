@@ -6,7 +6,7 @@ signInForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email =
-        document.getElementById("signin-email").value;
+        document.getElementById("signin-email").value.trim();
 
     const password =
         document.getElementById("signin-password").value;
@@ -24,8 +24,7 @@ signInForm.addEventListener("submit", async (e) => {
             {
                 method: "POST",
                 headers: {
-                    "Content-Type":
-                        "application/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     email,
@@ -34,36 +33,56 @@ signInForm.addEventListener("submit", async (e) => {
             }
         );
 
-        const data =
-            await response.json();
+        const data = await response.json();
 
         if (!response.ok) {
             throw new Error(
-                data.message ||
-                "Login failed"
+                data.message || "Login failed"
             );
         }
 
+        // Store authentication token
         localStorage.setItem(
             "token",
             data.token
         );
 
+        // Store entire user object
         localStorage.setItem(
             "user",
             JSON.stringify(data.user)
         );
 
+        // Store role separately for dashboard routing
+        if (data.user?.role) {
+            localStorage.setItem(
+                "role",
+                data.user.role
+            );
+        }
+
+        console.log("User:", data.user);
+        console.log("Role:", data.user?.role);
+
         alert("Login successful");
 
+        // Dashboard entry point
         window.location.href =
-            "../Dashboard/ParaDash.html";
+            "../Dashboard/Dashboard.html";
 
     } catch (error) {
 
-        alert(error.message);
+        console.error(error);
 
-        loginBtn.textContent = "Sign in";
+        alert(
+            error.message || "Something went wrong"
+        );
+
+    } finally {
+
+        loginBtn.textContent = "Sign In";
         loginBtn.disabled = false;
+
     }
+
 });

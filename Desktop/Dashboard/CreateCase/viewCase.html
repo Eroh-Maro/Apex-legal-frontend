@@ -6,7 +6,7 @@
     <title>Create Case | Apex Legal</title>
 
     <link rel="stylesheet" href="./CreateCase.css">
-    <script defer src="./createCase.js"></script>
+    <script defer src="./viewCase.js"></script>
 </head>
 <body>
 
@@ -194,257 +194,253 @@
         </header>
         <div class="page-content">
 
-            <!-- PAGE HEADER -->
-            <section class="page-header">
+    <!-- CASE HEADER -->
 
-                <h1>Create New Case</h1>
+    <div class="case-header">
 
-                <p>
-                    Enter case information and assign the matter to a legal team.
-                </p>
+        <div>
+            <h1 id="caseTitle">Loading Case...</h1>
 
-            </section>
+            <p id="caseNumber">
+                Case Number
+            </p>
+        </div>
 
-            <!-- FORM -->
-            <form id="createCaseForm" class="case-form">
+        <div class="case-actions">
 
-                <!-- CLIENT & MATTER DETAILS -->
-<div class="card">
 
-    <h2>Case Information</h2>
 
-    <div class="form-grid">
-
-        <!-- CASE TITLE -->
-        <div class="form-group">
-            <label for="title">
-                Case Title *
-            </label>
-
-            <input
-                type="text"
-                id="title"
-                placeholder="Enter case title"
-                required
+            <button
+                id="editCaseBtn"
+                class="primary-btn"
             >
+                Edit Case
+            </button>
+
         </div>
 
-        <!-- CASE NUMBER -->
-        <div class="form-group">
-            <label for="caseNumber">
-                Case Number *
-            </label>
+    </div>
 
-            <input
-                type="text"
-                id="caseNumber"
-                placeholder="FHC/L/123/2026"
-                required
-            >
-        </div>
+    <!-- CASE INFORMATION -->
 
-        <!-- CLIENT -->
-        <div class="form-group">
-    <label for="client">
-        Client
-    </label>
+    <div class="card">
 
-    <select id="client" required>
-        <option value="">
-            Select Client
-        </option>
-    </select>
-</div>
+        <h2>Case Information</h2>
 
-        <!-- CASE TYPE -->
-        <div class="form-group">
-            <label for="caseType">
-                Case Type *
-            </label>
+        <div class="info-grid">
 
-            <select id="caseType" required>
+            <div>
+                <span>Client</span>
+                <h4 id="clientName">Loading...</h4>
+            </div>
 
-                <option value="">
-                    Select Case Type
-                </option>
+            <div>
+                <span>Status</span>
+                <h4 id="caseStatus">Loading...</h4>
+            </div>
 
-                <option value="Litigation">
-                    Litigation
-                </option>
+            <div>
+                <span>Case Type</span>
+                <h4 id="caseType">Loading...</h4>
+            </div>
 
-                <option value="Corporate Law">
-                    Corporate Law
-                </option>
+            <div>
+                <span>Priority</span>
+                <h4 id="casePriority">Loading...</h4>
+            </div>
 
-                <option value="Property Law">
-                    Property Law
-                </option>
+            <div>
+                <span>Court</span>
+                <h4 id="courtName">Loading...</h4>
+            </div>
 
-                <option value="Criminal Law">
-                    Criminal Law
-                </option>
+            <div>
+                <span>Hearing Date</span>
+                <h4 id="hearingDate">Loading...</h4>
+            </div>
 
-                <option value="Family Law">
-                    Family Law
-                </option>
-
-                <option value="Arbitration">
-                    Arbitration
-                </option>
-
-                <option value="Commercial Transactions">
-                    Commercial Transactions
-                </option>
-
-            </select>
-        </div>
-
-        <!-- STATUS -->
-        <div class="form-group">
-            <label for="status">
-                Status
-            </label>
-
-            <select id="status">
-
-                <option value="open">
-                    Open
-                </option>
-
-                <option value="pending">
-                    Pending
-                </option>
-
-                <option value="in_court">
-                    In Court
-                </option>
-
-                <option value="closed">
-                    Closed
-                </option>
-
-                <option value="archived">
-                    Archived
-                </option>
-
-            </select>
-        </div>
-
-        <!-- PRIORITY -->
-        <div class="form-group">
-            <label for="priority">
-                Priority
-            </label>
-
-            <select id="priority">
-
-                <option value="low">
-                    Low
-                </option>
-
-                <option value="medium" selected>
-                    Medium
-                </option>
-
-                <option value="high">
-                    High
-                </option>
-
-                <option value="urgent">
-                    Urgent
-                </option>
-
-            </select>
-        </div>
-
-        <!-- COURT -->
-        <div class="form-group">
-            <label for="courtName">
-                Court Name
-            </label>
-
-            <input
-                type="text"
-                id="courtName"
-                placeholder="Federal High Court"
-            >
-        </div>
-
-        <!-- HEARING DATE -->
-        <div class="form-group">
-            <label for="hearingDate">
-                Hearing Date
-            </label>
-
-            <input
-                type="date"
-                id="hearingDate"
-            >
         </div>
 
     </div>
 
     <!-- DESCRIPTION -->
-    <div class="form-group full-width">
 
-        <label for="description">
-            Case Description
-        </label>
+    <div class="card">
 
-        <textarea
-            id="description"
-            placeholder="Enter case summary, background, or notes..."
-        ></textarea>
+        <h2>Case Description</h2>
+
+        <p id="caseDescription">
+            Loading...
+        </p>
+
+    </div>
+
+ <!-- DOCUMENTS -->
+
+<div class="card">
+
+    <h2>Case Documents</h2>
+
+    <div class="upload-form">
+
+        <select id="documentCategory">
+            <option value="">Select Category</option>
+
+            <option value="Litigation">Litigation</option>
+            <option value="Corporate Law">Corporate Law</option>
+            <option value="Property Law">Property Law</option>
+            <option value="Criminal Law">Criminal Law</option>
+            <option value="Family Law">Family Law</option>
+            <option value="Arbitration">Arbitration</option>
+            <option value="Internal Template">Internal Template</option>
+            <option value="Compliance">Compliance</option>
+        </select>
+
+        <input
+            type="text"
+            id="documentTag"
+            placeholder="e.g. Evidence A, Witness Statement"
+        >
+
+        <input
+            type="file"
+            id="documentFile"
+            hidden
+        >
+
+        <button
+            id="uploadDocumentBtn"
+            class="primary-btn"
+            type="button"
+        >
+            Upload Document
+        </button>
+
+    </div>
+
+    <div
+        id="documentsList"
+        class="documents-list"
+    >
+
+        <p>
+            No documents uploaded yet.
+        </p>
 
     </div>
 
 </div>
 
+       <!-- NOTES -->
 
+    <div class="card">
 
-                <!-- DOCUMENTS -->
-                <!-- <div class="card">
+        <div class="section-header">
 
-                    <h2>Initial Documents</h2>
-
-                    <div class="upload-box">
-
-                        <input
-                            type="file"
-                            id="documents"
-                            multiple
-                        >
-
-                        <p>
-                            Upload PDFs, DOCX, Images or supporting files
-                        </p>
-
-                    </div>
-
-                </div> -->
-
-                <!-- ACTIONS -->
-                <div class="form-actions">
-
-                    <button
-                        type="button"
-                        class="cancel-btn"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="submit"
-                        class="save-btn"
-                    >
-                        Save Case
-                    </button>
-
-                </div>
-
-            </form>
+            <h2>Case Notes</h2>
 
         </div>
+
+        <div class="note-form">
+
+            <textarea
+                id="newNote"
+                placeholder="Add case note..."
+            ></textarea>
+
+            <button
+                id="saveNoteBtn"
+                class="primary-btn"
+            >
+                Save Note
+            </button>
+
+        </div>
+
+        <div id="notesContainer"></div>
+
+    </div>
+
+<!-- HEARINGS -->
+
+<!-- HEARINGS -->
+
+<div class="card">
+
+    <div class="section-header">
+
+        <h2>Hearings</h2>
+
+        <button
+            id="createHearingBtn"
+            class="primary-btn"
+            type="button"
+        >
+            + Schedule Hearing
+        </button>
+
+    </div>
+
+    <div
+        id="hearingForm"
+        class="hearing-form"
+    >
+
+        <input
+            type="text"
+            id="hearingTitle"
+            placeholder="Hearing Title"
+        >
+
+        <input
+            type="date"
+            id="hearingDateInput"
+        >
+
+        <input
+            type="text"
+            id="hearingCourt"
+            placeholder="Court Name"
+        >
+
+        <input
+            type="text"
+            id="hearingCourtroom"
+            placeholder="Courtroom"
+        >
+
+        <input
+            type="text"
+            id="hearingJudge"
+            placeholder="Judge"
+        >
+
+        <button
+            id="saveHearingBtn"
+            class="primary-btn"
+            type="button"
+        >
+            Save Hearing
+        </button>
+
+    </div>
+
+    <div
+        id="hearingsContainer"
+        class="hearings-list"
+    >
+
+        <p>
+            No hearings scheduled.
+        </p>
+
+    </div>
+
+</div>
+ </div>
+
+
+</div>
 
     </main>
 

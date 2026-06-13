@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Case | Apex Legal</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="client.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://res.cloudinary.com/doopzrzep/image/upload/v1780224110/Asset_132_300x_grtslt.png"
+    />
+  </head>
 
-    <link rel="stylesheet" href="./CreateCase.css">
-    <script defer src="./createCase.js"></script>
-</head>
-<body>
-
-<div class="dashboard">
-
+  <body>
+    <div class="dashboard">
       <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="logo">
@@ -31,7 +39,7 @@
         </div>
 
         <nav>
-          <a href="#" class="nav-item ">
+          <a href="../Dashboard.html" class="nav-item">
             <svg
               width="18"
               height="18"
@@ -45,10 +53,10 @@
               />
             </svg>
 
-            User dashboard
+            User Dashboard
           </a>
 
-          <a href="../CreateClient/client.Html" class="nav-item">
+          <a href="../CreateClient/client.html" class="nav-item active">
             <svg
               width="22"
               height="16"
@@ -65,7 +73,7 @@
             Client
           </a>
 
-          <a href="../CreateCase/Case.html" class="nav-item active">
+          <a href="../CreateCase/Case.html" class="nav-item">
             <svg
               width="24"
               height="24"
@@ -158,10 +166,7 @@
         </div>
       </aside>
 
-    <!-- MAIN -->
-    <main class="main-content">
-
-        <!-- TOPBAR -->
+      <main class="main-content">
         <header class="topbar">
           <div class="search-box">
             <svg width="18" height="24" viewBox="0 0 18 24" fill="none">
@@ -192,263 +197,91 @@
             </div>
           </div>
         </header>
-        <div class="page-content">
 
-            <!-- PAGE HEADER -->
-            <section class="page-header">
 
-                <h1>Create New Case</h1>
+<section class="clients-overview">
 
-                <p>
-                    Enter case information and assign the matter to a legal team.
-                </p>
+  <div class="page-header">
 
-            </section>
+    <div>
+      <h1>Clients</h1>
+      <p>
+        Manage client records, contact information,
+        and legal relationships.
+      </p>
+    </div>
 
-            <!-- FORM -->
-            <form id="createCaseForm" class="case-form">
+    <a
+      href="../CreateClient/CreateClient.html"
+      class="create-client-btn"
+    >
+      + Create Client
+    </a>
 
-                <!-- CLIENT & MATTER DETAILS -->
-<div class="card">
+  </div>
 
-    <h2>Case Information</h2>
+  <div class="stats-grid">
 
-    <div class="form-grid">
+    <div class="stat-card">
+      <h3 id="totalClients">0</h3>
+      <p>Total Clients</p>
+    </div>
 
-        <!-- CASE TITLE -->
-        <div class="form-group">
-            <label for="title">
-                Case Title *
-            </label>
+    <div class="stat-card">
+      <h3 id="activeClients">0</h3>
+      <p>Active Clients</p>
+    </div>
 
-            <input
-                type="text"
-                id="title"
-                placeholder="Enter case title"
-                required
-            >
-        </div>
+    <div class="stat-card">
+      <h3 id="newClients">0</h3>
+      <p>Added This Month</p>
+    </div>
 
-        <!-- CASE NUMBER -->
-        <div class="form-group">
-            <label for="caseNumber">
-                Case Number *
-            </label>
+  </div>
 
-            <input
-                type="text"
-                id="caseNumber"
-                placeholder="FHC/L/123/2026"
-                required
-            >
-        </div>
+  <div class="table-card">
 
-        <!-- CLIENT -->
-        <div class="form-group">
-    <label for="client">
-        Client
-    </label>
+    <div class="table-header">
 
-    <select id="client" required>
-        <option value="">
-            Select Client
-        </option>
-    </select>
-</div>
+      <h2>Client Directory</h2>
 
-        <!-- CASE TYPE -->
-        <div class="form-group">
-            <label for="caseType">
-                Case Type *
-            </label>
-
-            <select id="caseType" required>
-
-                <option value="">
-                    Select Case Type
-                </option>
-
-                <option value="Litigation">
-                    Litigation
-                </option>
-
-                <option value="Corporate Law">
-                    Corporate Law
-                </option>
-
-                <option value="Property Law">
-                    Property Law
-                </option>
-
-                <option value="Criminal Law">
-                    Criminal Law
-                </option>
-
-                <option value="Family Law">
-                    Family Law
-                </option>
-
-                <option value="Arbitration">
-                    Arbitration
-                </option>
-
-                <option value="Commercial Transactions">
-                    Commercial Transactions
-                </option>
-
-            </select>
-        </div>
-
-        <!-- STATUS -->
-        <div class="form-group">
-            <label for="status">
-                Status
-            </label>
-
-            <select id="status">
-
-                <option value="open">
-                    Open
-                </option>
-
-                <option value="pending">
-                    Pending
-                </option>
-
-                <option value="in_court">
-                    In Court
-                </option>
-
-                <option value="closed">
-                    Closed
-                </option>
-
-                <option value="archived">
-                    Archived
-                </option>
-
-            </select>
-        </div>
-
-        <!-- PRIORITY -->
-        <div class="form-group">
-            <label for="priority">
-                Priority
-            </label>
-
-            <select id="priority">
-
-                <option value="low">
-                    Low
-                </option>
-
-                <option value="medium" selected>
-                    Medium
-                </option>
-
-                <option value="high">
-                    High
-                </option>
-
-                <option value="urgent">
-                    Urgent
-                </option>
-
-            </select>
-        </div>
-
-        <!-- COURT -->
-        <div class="form-group">
-            <label for="courtName">
-                Court Name
-            </label>
-
-            <input
-                type="text"
-                id="courtName"
-                placeholder="Federal High Court"
-            >
-        </div>
-
-        <!-- HEARING DATE -->
-        <div class="form-group">
-            <label for="hearingDate">
-                Hearing Date
-            </label>
-
-            <input
-                type="date"
-                id="hearingDate"
-            >
-        </div>
+      <input
+        type="text"
+        id="clientSearch"
+        placeholder="Search clients..."
+      >
 
     </div>
 
-    <!-- DESCRIPTION -->
-    <div class="form-group full-width">
+    <table>
 
-        <label for="description">
-            Case Description
-        </label>
+      <thead>
 
-        <textarea
-            id="description"
-            placeholder="Enter case summary, background, or notes..."
-        ></textarea>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Company</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
 
+      </thead>
+
+      <tbody id="clientTableBody">
+
+        <!-- JS loads clients here -->
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+      </main>
     </div>
 
-</div>
-
-
-
-                <!-- DOCUMENTS -->
-                <!-- <div class="card">
-
-                    <h2>Initial Documents</h2>
-
-                    <div class="upload-box">
-
-                        <input
-                            type="file"
-                            id="documents"
-                            multiple
-                        >
-
-                        <p>
-                            Upload PDFs, DOCX, Images or supporting files
-                        </p>
-
-                    </div>
-
-                </div> -->
-
-                <!-- ACTIONS -->
-                <div class="form-actions">
-
-                    <button
-                        type="button"
-                        class="cancel-btn"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="submit"
-                        class="save-btn"
-                    >
-                        Save Case
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </main>
-
-</div>
-
-</body>
+    <script src="clientOverview.js"></script>
+  </body>
 </html>

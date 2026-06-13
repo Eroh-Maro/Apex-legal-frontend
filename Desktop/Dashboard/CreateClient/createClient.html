@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="ParaDash.css" />
+    <link rel="stylesheet" href="createClient.css" />
     <link
       rel="icon"
       type="image/png"
@@ -39,7 +39,7 @@
         </div>
 
         <nav>
-          <a href="#" class="nav-item active">
+          <a href="../Dashboard.html" class="nav-item">
             <svg
               width="18"
               height="18"
@@ -53,10 +53,10 @@
               />
             </svg>
 
-            Item Name
+            User Dashboard
           </a>
 
-          <a href="../Client page/clientpage.html" class="nav-item">
+          <a href="../CreateClient/client.html" class="nav-item active">
             <svg
               width="22"
               height="16"
@@ -73,7 +73,7 @@
             Client
           </a>
 
-          <a href="../case MGT/case.html" class="nav-item">
+          <a href="../CreateCase/Case.html" class="nav-item">
             <svg
               width="24"
               height="24"
@@ -197,79 +197,124 @@
             </div>
           </div>
         </header>
+        <div class="divide">
+                  <header class="page-header">
+  <div>
+    <h1>Create New Client</h1>
+    <p>Add a new client to the Apex Legal system</p>
+  </div>
 
-        <div class="overall-space">
-          <section class="welcome">
-            <h1>
-              Welcome back,
-              <span id="welcomeName">User</span>
-            </h1>
+  <a href="../CreateClient/client.Html" class="back-btn">
+    ← Back to Clients
+  </a>
+</header>
 
-            <p>
-              You have
-              <span id="upcomingHearingsCount">0</span>
-              upcoming hearings.
-            </p>
-          </section>
+<section class="client-form-card">
 
-          <section class="stats-grid">
-            <div class="stat-card">
-              <h3>Active Cases</h3>
-              <h2 id="activeCases">0</h2>
-            </div>
+  <form id="createClientForm">
 
-            <div class="stat-card">
-              <h3>Pending Cases</h3>
-              <h2 id="pendingCases">0</h2>
-            </div>
+    <div class="form-grid">
 
-            <div class="stat-card">
-              <h3>Closed Cases</h3>
-              <h2 id="closedCases">0</h2>
-            </div>
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Enter client's full name"
+          required
+        />
+      </div>
 
-            <div class="stat-card">
-              <h3>High Priority</h3>
-              <h2 id="highPriorityCases">0</h2>
-            </div>
-          </section>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="client@email.com"
+        />
+      </div>
 
-          <section class="content-grid">
-            <div class="card">
-              <div class="card-header">
-                <h2>My Cases</h2>
-              </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="+234..."
+          required
+        />
+      </div>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Case No</th>
-                    <th>Title</th>
-                    <th>Status</th>
-                    <th>Next Hearing</th>
-                  </tr>
-                </thead>
+      <div class="form-group">
+        <label>Gender</label>
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
 
-                <tbody id="recentCasesTable">
-                  <tr>
-                    <td colspan="4">Loading...</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+      <div class="form-group">
+        <label>Company Name</label>
+        <input
+          type="text"
+          id="companyName"
+          placeholder="Company name"
+        />
+      </div>
 
-            <div class="card">
-              <div class="card-header">
-                <h2>Upcoming Hearings</h2>
-              </div>
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+        />
+      </div>
 
-              <div id="hearingsContainer"></div>
-            </div>
-          </section>
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <input
+        type="text"
+        id="address"
+        placeholder="Client address"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Notes</label>
+      <textarea
+        id="notes"
+        rows="5"
+        placeholder="Additional client notes..."
+      ></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button
+        type="button"
+        class="cancel-btn"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="submit"
+        class="save-btn"
+      >
+        Create Client
+      </button>
+    </div>
+
+  </form>
+
+</section>
         </div>
+
+
       </main>
     </div>
 
-    <script src="ParaDash.js"></script>
+    <script src="createClient.js"></script>
   </body>
 </html>
