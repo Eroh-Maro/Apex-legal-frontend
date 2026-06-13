@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Case | Apex Legal</title>
+
+    <link rel="stylesheet" href="./CreateCase.css">
+    <script defer src="./create-case.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-head">
+                <div class="logo-icon">
+                    <img src="https://res.cloudinary.com/doopzrzep/image/upload/v1780224110/Asset_132_300x_grtslt.png" alt="Apex Logo">
+                </div>
+                <h2>Apex</h2>
+            </div>
+
+            <div class="logo-paragrah">
+                <p>LEGAL OPERATIONS</p>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="../dashboard/dashboard.html" class="nav-item">
+                Dashboard
+            </a>
+
+            <a href="../Client page/clientpage.html" class="nav-item">
+                Clients
+            </a>
+
+            <a href="../case MGT/case.html" class="nav-item active">
+                Cases
+            </a>
+
+            <a href="../hearings/hearings.html" class="nav-item">
+                Hearings
+            </a>
+
+            <a href="../reports/reports.html" class="nav-item">
+                Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="new-case-btn">
+                + New Case
+            </button>
+
+            <a href="#" class="footer-link">
+                Help
+            </a>
+
+            <a href="#" id="logoutBtn" class="footer-link">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    placeholder="Search cases, documents, or clients..."
+                >
+            </div>
+
+            <div class="top-bar-icons">
+
+                <button class="icon-btn">
+                    ⚙️
+                </button>
+
+                <button class="icon-btn">
+                    🔔
+                </button>
+
+            </div>
+
+            <div class="topbar-actions">
+
+                <div class="profile">
+
+                    <div>
+                        <h4 id="userName">Loading...</h4>
+                        <p id="userRole">STAFF</p>
+                    </div>
+
+                    <img
+                        id="userAvatar"
+                        src="https://via.placeholder.com/50"
+                        alt="Profile Picture"
+                    >
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="page-content">
+
+            <!-- PAGE HEADER -->
+            <section class="page-header">
+
+                <h1>Create New Case</h1>
+
+                <p>
+                    Enter case information and assign the matter to a legal team.
+                </p>
+
+            </section>
+
+            <!-- FORM -->
+            <form id="createCaseForm" class="case-form">
+
+                <!-- CLIENT & MATTER DETAILS -->
+                <div class="card">
+
+                    <h2>Client & Matter Details</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="clientId">
+                                Client *
+                            </label>
+
+                            <select id="clientId" required>
+                                <option value="">
+                                    Loading Clients...
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="title">
+                                Matter Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="title"
+                                placeholder="Enter matter title"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Case Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="5"
+                            placeholder="Brief summary of the case..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+                <!-- ASSIGNMENT -->
+                <div class="card">
+
+                    <h2>Assignment & Logistics</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="assignedLawyer">
+                                Assigned Lawyer
+                            </label>
+
+                            <input
+                                type="text"
+                                id="assignedLawyer"
+                                placeholder="Lawyer Name"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="jurisdiction">
+                                Jurisdiction
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jurisdiction"
+                                placeholder="Court or Region"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="priority">
+                                Priority
+                            </label>
+
+                            <select id="priority">
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium" selected>
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="statuteDeadline">
+                                Statute Deadline
+                            </label>
+
+                            <input
+                                type="date"
+                                id="statuteDeadline"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CASE DETAILS -->
+                <div class="card">
+
+                    <h2>Case Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="status">
+                                Status
+                            </label>
+
+                            <select id="status">
+
+                                <option value="Open">
+                                    Open
+                                </option>
+
+                                <option value="Pending">
+                                    Pending
+                                </option>
+
+                                <option value="Closed">
+                                    Closed
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="caseType">
+                                Case Type
+                            </label>
+
+                            <input
+                                type="text"
+                                id="caseType"
+                                placeholder="Civil, Criminal, Family..."
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div class="card">
+
+                    <h2>Initial Documents</h2>
+
+                    <div class="upload-box">
+
+                        <input
+                            type="file"
+                            id="documents"
+                            multiple
+                        >
+
+                        <p>
+                            Upload PDFs, DOCX, Images or supporting files
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Save Case
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

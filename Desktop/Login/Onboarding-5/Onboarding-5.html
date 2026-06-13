@@ -35,7 +35,7 @@
 
             <p>
                 Your Apex Legal workspace has been configured successfully.
-                All selected modules and permissions are ready for use.
+                Review your details below and launch your dashboard.
             </p>
 
         </div>
@@ -44,33 +44,55 @@
 
     <section class="right-panel">
 
-        <div class="role-card">
+        <div class="profile-summary">
 
-            <p class="section-title">
-                SELECTED ROLE
-            </p>
+            <div class="profile-header">
 
-            <h2>
-                Senior Litigation Associate
-            </h2>
-
-            <p class="role-meta">
-                Litigation Department • Lagos Office
-            </p>
-
-            <div class="meta-grid">
+                <img
+                    id="profileImage"
+                    src="https://via.placeholder.com/120"
+                    alt="Profile Picture"
+                >
 
                 <div>
-                    <h4>CLEARANCE LEVEL</h4>
-                    <p>Tier 1 Administrative</p>
-                </div>
 
-                <div>
-                    <h4>ACCESS ID</h4>
-                    <p>LD-993-2024</p>
+                    <h2 id="fullName">
+                        Loading...
+                    </h2>
+
+                    <p id="role">
+                        Loading...
+                    </p>
+
                 </div>
 
             </div>
+
+            <div class="info-grid">
+
+                <div>
+                    <h4>Firm Name</h4>
+                    <p id="firmName">-</p>
+                </div>
+
+                <div>
+                    <h4>Firm Size</h4>
+                    <p id="firmSize">-</p>
+                </div>
+
+                <div>
+                    <h4>Email</h4>
+                    <p id="email">-</p>
+                </div>
+
+                <div>
+                    <h4>Phone Number</h4>
+                    <p id="phoneNumber">-</p>
+                </div>
+
+            </div>
+
+
 
         </div>
 
@@ -80,13 +102,15 @@
 
             <ul>
 
-                <li>✓ Case Analytics</li>
+                <li>✓ Case Management</li>
 
-                <li>✓ Document Drafting</li>
+                <li>✓ Document Management</li>
 
-                <li>✓ Billing Manager</li>
+                <li>✓ Client Records</li>
 
-                <li>✓ E-Discovery Hub</li>
+                <li>✓ Hearing Scheduler</li>
+
+                <li>✓ Audit Logs</li>
 
             </ul>
 
@@ -104,12 +128,19 @@
 
         <div class="buttons">
 
-            <a href="../dashboard/dashboard.html" class="btn primary">
-                Launch Dashboard
+            <a
+                href="#"
+                id="launchDashboard"
+                class="btn primary"
+            >
+                Create User
             </a>
 
-            <a href="#" class="btn outline">
-                View Profile
+            <a
+                href="../Onboarding-4/Onboarding-4.html"
+                class="btn outline"
+            >
+                Edit Profile
             </a>
 
         </div>
@@ -118,7 +149,7 @@
 
 </div>
 
-<script src="onboard5.js"></script>
+<script src="Onboarding-5.js"></script>
 
 </body>
 </html>

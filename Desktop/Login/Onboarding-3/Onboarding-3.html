@@ -46,55 +46,58 @@
 
     </section>
 
-    <section class="right-panel">
+<div class="role-selection">
 
-        <div class="role-card">
+    <h2>Select Your Role</h2>
 
-            <div class="role-header">
+    <div class="role-grid">
 
-                <div class="role-icon">
-                    <!-- Your SVG here -->
-                </div>
-
-                <div>
-                    <h2>Lawyer</h2>
-                    <p class="role-title">
-                        Primary Legal Practitioner
-                    </p>
-                </div>
-
-            </div>
-
-            <p class="role-description">
+        <div class="role-option active" data-role="lawyer">
+            <h3>Lawyer</h3>
+            <p>
                 Directs case strategy, executes legal filings,
-                and provides authoritative counsel to clients.
+                and provides legal counsel.
             </p>
-
-            <div class="selected-badge">
-                ✓ Selected
-            </div>
-
         </div>
 
-        <div class="buttons">
-
-            <a href="../Onboarding-2/Onboarding-2.html"
-                class="btn outline">
-                ← Previous
-            </a>
-
-            <a href="../Onboarding-4/Onboarding-4.html"
-                class="btn primary">
-                Next →
-            </a>
-
+        <div class="role-option" data-role="secretary">
+            <h3>Secretary</h3>
+            <p>
+                Manages scheduling, communications,
+                documentation and administrative tasks.
+            </p>
         </div>
 
-    </section>
+        <div class="role-option" data-role="paralegal">
+            <h3>Paralegal</h3>
+            <p>
+                Assists lawyers with legal research,
+                case preparation and documentation.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="../Onboarding-2/Onboarding-2.html"
+           class="btn outline">
+            ← Previous
+        </a>
+
+        <a href="../Onboarding-4/Onboarding-4.html"
+           id="nextBtn"
+           class="btn primary">
+            Next →
+        </a>
+
+    </div>
 
 </div>
 
-<script src="onboard3.js"></script>
+</div>
+
+<script src="Onboarding-3.js"></script>
 
 </body>
 </html>

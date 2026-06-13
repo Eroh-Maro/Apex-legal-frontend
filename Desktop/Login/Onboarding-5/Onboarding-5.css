@@ -217,3 +217,121 @@ body{
     border:1px solid #2563eb;
     color:#2563eb;
 }
+
+/* PROFILE CARD */
+
+.profile-summary{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:30px;
+}
+
+.profile-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.profile-header img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #2563eb;
+    flex-shrink:0;
+}
+
+.profile-header h2{
+    font-size:28px;
+    color:#1e293b;
+    margin-bottom:6px;
+}
+
+.profile-header p{
+    color:#64748b;
+    font-size:16px;
+}
+
+/* INFO GRID */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.info-grid div{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:16px;
+}
+
+.info-grid h4{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#64748b;
+    margin-bottom:8px;
+}
+
+.info-grid p{
+    font-size:15px;
+    color:#1e293b;
+    font-weight:500;
+    word-break:break-word;
+}
+
+/* BIO */
+
+.bio-section{
+    margin-top:25px;
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:20px;
+}
+
+.bio-section h4{
+    margin-bottom:10px;
+    color:#64748b;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.bio-section p{
+    color:#334155;
+    line-height:1.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .profile-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+#messageBox{
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+#messageBox.success{
+    color: #16a34a;
+}
+
+#messageBox.error{
+    color: #dc2626;
+}
