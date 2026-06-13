@@ -62,7 +62,7 @@ async function loadClients() {
     try {
 
         const response = await fetch(
-            "http://localhost:8080/api/clients",
+            "https://apex-legal-1.onrender.com/api/clients",
             {
                 headers: {
                     Authorization:
@@ -224,7 +224,7 @@ if (createCaseForm) {
 
                 const response =
                     await fetch(
-                        "http://localhost:8080/api/cases/create",
+                        "https://apex-legal-1.onrender.com/api/cases/create",
                         {
                             method: "POST",
 

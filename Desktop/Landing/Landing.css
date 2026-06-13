@@ -61,7 +61,7 @@ align-items: center;
 .nav-btn{
   width:136px;
   background-color: #1d4ed8;
-  padding:0px 20px;
+  padding: 10px 20px;
   border:none;
   color:#fff;
   border-radius: 4px;
@@ -72,6 +72,12 @@ align-items: center;
   font-optical-sizing: auto;
   font-weight:bold;
   font-style: normal;
+}
+
+.second{
+  background-color: #fff;
+  border: 1px solid #1d4ed8;
+  color: #1d4ed8;
 }
 .first-hero{
   display:flex;
@@ -502,6 +508,7 @@ justify-content:space-between;
       padding: 0px;
       width: 100px;
     }
+    
     .nav-svg{
       display: none;
     }

@@ -54,7 +54,7 @@ async function loadClients() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/clients",
+                "https://apex-legal-1.onrender.com/api/clients",
                 {
                     headers: {
                         Authorization:

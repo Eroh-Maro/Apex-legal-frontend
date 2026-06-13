@@ -72,7 +72,7 @@ registerBtn.addEventListener("click", async (e) => {
     try {
         console.time("registration");
         const response = await fetch(
-            "http://localhost:8080/api/users/register",
+            "https://apex-legal-1.onrender.com/api/users/register",
             {
                 method: "POST",
                 headers: {
