@@ -22,7 +22,7 @@
 
     <section class="left-panel">
 
-        <a href="../Onboarding-1.html/Onboarding-1.html" class="back-btn">
+        <a href="../Onboarding-1/Onboarding-1.html" class="back-btn">
             ← Back
         </a>
 
@@ -81,10 +81,11 @@
             <h2>Firm Information</h2>
 
             <div class="form-group">
-                <label>Firm Name</label>
+                <label for="firmName">Firm Name</label>
 
                 <input
                     type="text"
+                    id="firmName"
                     placeholder="e.g. Sterling & Associates"
                 >
             </div>
@@ -95,22 +96,22 @@
 
                 <div class="size-grid">
 
-                    <div class="size-option active">
+                    <div class="size-option active" data-size="1-5">
                         <strong>1 - 5</strong>
                         <span>Partners</span>
                     </div>
 
-                    <div class="size-option">
+                    <div class="size-option" data-size="6-20">
                         <strong>6 - 20</strong>
                         <span>Boutique</span>
                     </div>
 
-                    <div class="size-option">
+                    <div class="size-option" data-size="21-50">
                         <strong>21 - 50</strong>
                         <span>Mid-Size</span>
                     </div>
 
-                    <div class="size-option">
+                    <div class="size-option" data-size="50+">
                         <strong>50+</strong>
                         <span>Enterprise</span>
                     </div>
@@ -127,6 +128,7 @@
             <a
                 href="../Onboarding-3/Onboarding-3.html"
                 class="continueBtn"
+                id="continueBtn"
             >
                 CONTINUE →
             </a>
@@ -137,7 +139,7 @@
 
 </div>
 
-<script src="onboard2.js"></script>
+<script src="Onboarding-2.js"></script>
 
 </body>
 </html>
